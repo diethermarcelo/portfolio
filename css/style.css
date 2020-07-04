@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css?family=Bangers|Open+Sans|Roboto&display=swap');
+  
+
+/* variables */
+:root {
+  --main-white: #f0f0f0;
+  --main-blue: #0F52BA;
+  --main-red: #be3144;
+  --main-gray: #303841;
+  --crimson: #f79862;
+}
+
+/* Base reset */
+*{
+  font-family: 'Bangers', cursive;
+  font-size:16px;
+  margin:0;
+  padding: 0;
+}
+
+/* box-sizing, font-sizing */
+*::before, *::after{
+  box-sizing:inherit;
+  scroll-behavior:smooth;
+}
+html{
+  box-sizing:border-box;  
+  scroll-behavior: smooth;
+  overflow-x:hidden;
+}
+body{
+  line-height:1.4;
+  color:var(--main-white);
+}
+h1,h2,p{
+  text-align:center;
+  font-family: 'Roboto', sans-serif;
+}
+h1{
+  font-weight:900;
+}
+a{
+  text-decoration:none;
+  color:var(--main-white);
+}
+a li{
+  list-style:none;
+}
+img{
+  display:block;
+  width:100%;
+}
+
+/* nav */
+#navbar{
+  position:fixed;
+  top:0;
+  z-index: 1;
+}
+.nav{
+  display:flex;
+  justify-content:flex-end;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  background:var(--main-blue);
+}
+.nav-list{
+  display:flex;
+  margin-right:10px;
+}
+.nav-list a{
+  display:block;
+  padding: 1em;
+}
+.nav-list a li{
+  font-size:1.2em;
+}
+.nav-list a:hover{
+  color:var(--crimson);
+}
+
+/* Welcome */
+#welcome-section{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  width:100%;
+  height: 100vh;  
+  background-color: #000;
+  background-image: linear-gradient(62deg, #FFEFBA 0%, #FFFFFF 100%);
+  color:black;
+}
+
+@keyframes movetoright{
+  from{
+    opacity: 0;
+    left: -1200px;
+  }
+  to{
+    opacity: 1;
+    left:0px;
+  }
+}
+
+#welcome-section h1 {
+  font-size:3em;
+  font-family: "Bangers";
+  letter-spacing: 3px;
+  color: black;
+  left:-1200px;
+  animation: movetoright 2.5s forwards;
+  position:relative;
+  width:2000%;
+}
+#welcome-section p{
+  font-size:2em;
+  font-style:italic;
+  color:var(--main-blue);
+  position:relative;
+  top:-10px;
+  left:-1200px;
+  animation: movetoright 2.5s forwards;
+}
+
+/* Project */
+#projects{
+  text-align:center;
+  padding-top:50px;
+  background: linear-gradient(62deg, #f46b45 0%, #eea849 100%);
+}
+#projects-section-header{
+  max-width:400px;
+  margin: 30px auto 30px auto;
+  /*border-bottom: 2px solid var(--main-blue);*/
+  font-size:2.3em;
+  font-family: 'Bangers', cursive;
+  letter-spacing:2px;
+  color:var(--main-white);
+  text-shadow:
+   -1px -1px 0 black,  
+    1px -1px 0  black,  
+    -1px 1px 0  black,  
+     1px 1px 0 black;
+}
+.projects-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 15px;
+  width: 100%;
+  max-width: 1280px;
+  margin: 20px auto;  
+  margin-bottom:30px;
+}
+
+.project {
+  background: var(--main-blue);
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+  border-radius:5px;
+  color:var(--crimson);
+}
+.code{
+  color:var(--main-blue);
+  transition: color .5s ease-out;
+  font-family: 'Roboto', sans-serif;
+  vertical-align:center;
+  font-size:1.2em;
+}
+.project:hover .code{
+  color:white;
+  font-weight:bold;
+}
+.project:hover{
+  color:white;
+}
+.project-image{
+  border-radius:5px;
+  height:400px;
+}
+.project-title{
+  margin-top:5px;
+  font-family: 'Bangers', cursive;
+  letter-spacing:3px;
+  font-size:1.3em;
+  transition: color .5s ease-out;
+  padding-bottom:5px;
+}
+.btn{  
+  display: inline-block;
+  font-size:1.4em;
+  padding:4px 8px;
+  border-radius:4px;
+}
+.btn-show-all{
+  background:var(--main-blue);
+  padding-right:10px;
+  margin-left: 10px;
+  letter-spacing:2px;
+  color:var(--crimson);
+  transition: color .5s ease-out;
+  margin-bottom:70px;
+}
+.btn-show-all:hover .code{
+  color:white;
+}
+.btn-show-all:hover{
+  color:white;
+}
+
+/* dito hanggang baba ng https://codepen.io/freeCodeCamp/pen/zNBOYG is wala pa ako*/
+  
+
+/* Contacts */
+#profile{  
+  font-size:1.5em;
+  background-image: linear-gradient(62deg, #FFEFBA 0%, #FFFFFF 100%);
+  color:black;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  width:100%;
+  height:100vh;
+  padding: 0 10px;  
+}
+.profile-section-header h2{  
+  font-family: 'Bangers', cursive;
+  font-size:3.4em;
+  font-weight:normal;
+  color:black;
+  letter-spacing:2px;
+  /*left:-1200px;*/
+  position:relative;
+}
+.contact-links{
+  display:flex;
+  justify-content:center;
+  width:100%;
+  max-width:970px;
+  margin-top:15px;
+  flex-wrap:wrap;  
+  /*left:-1200px;*/
+
+  position:relative;
+}
+.contact-details{
+  font-size:1.4em;
+  text-shadow: 2px 2px 2px white;
+  transition: transform 0.3s ease-out;
+}
+.contact-details:hover {
+  transform: translateY(8px);
+}
+#profile li{
+  color:black;
+}
+#profile li img{
+  display:inline;
+  width:30px;
+  height:30px;
+}
+footer {
+  font-weight: 300;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2rem;
+  width:100%;
+  border-top: 4px solid var(--main-blue);
+  background: linear-gradient(62deg, #f46b45 0%, #eea849 100%);
+}
+
+footer a{
+  color:black;
+  font-size:1.4em;
+}
+
+/* Comments: 
+  html: font-size
+  media queries for font-size
+  media nav and nav-list
+  media queries project secton and project grid
+
+  add:
+    nav media queries
+    welcome font-size media queries
+*/
+
+@media(max-width:500px){
+}
