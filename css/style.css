@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Bangers|Open+Sans|Roboto&display=swap');
-  
+
 
 /* variables */
 :root {
@@ -24,7 +24,7 @@
   scroll-behavior:smooth;
 }
 html{
-  box-sizing:border-box;  
+  box-sizing:border-box;
   scroll-behavior: smooth;
   overflow-x:hidden;
 }
@@ -88,7 +88,7 @@ img{
   justify-content:center;
   align-items:center;
   width:100%;
-  height: 100vh;  
+  height: 100vh;
   background-color: #000;
   background-image: linear-gradient(62deg, #FFEFBA 0%, #FFFFFF 100%);
   color:black;
@@ -140,9 +140,9 @@ img{
   letter-spacing:2px;
   color:var(--main-white);
   text-shadow:
-   -1px -1px 0 black,  
-    1px -1px 0  black,  
-    -1px 1px 0  black,  
+   -1px -1px 0 black,
+    1px -1px 0  black,
+    -1px 1px 0  black,
      1px 1px 0 black;
 }
 .projects-grid{
@@ -151,7 +151,7 @@ img{
   grid-gap: 15px;
   width: 100%;
   max-width: 1280px;
-  margin: 20px auto;  
+  margin: 20px auto;
   margin-bottom:30px;
 }
 
@@ -187,7 +187,7 @@ img{
   transition: color .5s ease-out;
   padding-bottom:5px;
 }
-.btn{  
+.btn{
   display: inline-block;
   font-size:1.4em;
   padding:4px 8px;
@@ -210,10 +210,10 @@ img{
 }
 
 /* dito hanggang baba ng https://codepen.io/freeCodeCamp/pen/zNBOYG is wala pa ako*/
-  
+
 
 /* Contacts */
-#profile{  
+#profile{
   font-size:1.5em;
   background-image: linear-gradient(62deg, #FFEFBA 0%, #FFFFFF 100%);
   color:black;
@@ -223,9 +223,9 @@ img{
   align-items:center;
   width:100%;
   height:100vh;
-  padding: 0 10px;  
+  padding: 0 10px;
 }
-.profile-section-header h2{  
+.profile-section-header h2{
   font-family: 'Bangers', cursive;
   font-size:3.4em;
   font-weight:normal;
@@ -240,7 +240,7 @@ img{
   width:100%;
   max-width:970px;
   margin-top:15px;
-  flex-wrap:wrap;  
+  flex-wrap:wrap;
   /*left:-1200px;*/
 
   position:relative;
@@ -261,6 +261,8 @@ img{
   width:30px;
   height:30px;
 }
+
+/* Footer */
 footer {
   font-weight: 300;
   display: flex;
@@ -272,11 +274,24 @@ footer {
 }
 
 footer a{
-  color:black;
+  color:white;
   font-size:1.4em;
+  transition: font-size 5s;
+  text-shadow:
+   -1px -1px 0 black,
+    1px -1px 0  black,
+    -1px 1px 0  black,
+     1px 1px 0 black;
+  opacity:0.5;
+  transition:all 0.3s ease;
+  letter-spacing: 2px;
+}
+footer a:hover{
+    opacity:1;
+    font-size: 30px
 }
 
-/* Comments: 
+/* Comments:
   html: font-size
   media queries for font-size
   media nav and nav-list
@@ -288,4 +303,48 @@ footer a{
 */
 
 @media(max-width:500px){
+  #welcome-section h1{
+    font-size: 30px;
+  }
+  #welcome-section p{
+    font-size: 20px;
+  }
+  #projects #projects-section-header{
+    font-size: 30px;
+  }
+  .projects-grid{
+    width: 80%;
+    font-size: 10px;
+  }
+  .project {
+    font-size: 15px;
+  }
+  .code{
+    font-size:15px;
+  }
+  .profile-section-header h2{
+    font-size:35px;
+    margin-right: 10px;
+  }
+  .contact-links{
+    margin-right: 15px;
+    flex-wrap:wrap;
+    /*left:-1200px;*/
+
+    position:relative;
+  }
+  #profile li img{
+    width:20px;
+    height:20px;
+  }
+  footer a {
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    font-size: 15px;
+  }
+  footer a:hover{
+    transform:translateY(-15px);
+    font-size: 20px;
+  }
 }

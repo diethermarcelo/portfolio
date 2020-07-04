@@ -19,9 +19,7 @@
 				alert("a");
 			})*/
 		}
-		function profilescroll(){
-			alert("a")
-		}
+
 	</script>
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -35,37 +33,38 @@
 />
 
 	<div id="container">
-	  
+
 	  <!-- Nav -->
-	  <nav id="navbar" class="nav"> 
+	  <nav id="navbar" class="nav">
 	    <ul class="nav-list">
-	      <a href="#welcome-section"> 
-	        <li> About </li> 
+	      <a href="#welcome-section">
+	        <li> About </li>
 	      </a>
-	      <a href="#projects"> 
-	        <li> Projects </li> 
+	      <a href="#projects">
+	        <li> Projects </li>
 	      </a>
-	      <a href="#profile" id="nav-profile"> 
-	        <li> Contact </li> 
+	      <a href="#profile" id="nav-profile">
+	        <li> Contact </li>
 	      </a>
 	    </ul>
 	  </nav>
-	  
+
 	  <!-- Welcome -->
 	  <section id="welcome-section">
 	    <h1> Hello, I am Diether Marcelo </h1>
 	    <p > a web developer </p>
-	  </section>  
-	  
+	  </section>
+
 	  <!-- Projects -->
 	  <section id="projects">
-	    <h2 id="projects-section-header"> These are my projects </h2>
-	    
+	    <h2 id="projects-section-header" data-aos="fade-right"> These are my projects </h2>
+
 	    <div class="projects-grid">
-	      <a href="https://codepen.io/diethermarcelo/full/bGNZGxp" 
+	      <a href="https://codepen.io/diethermarcelo/full/bGNZGxp"
 	         target="_blank"
-	         class="project project-tile">
-	      <img class="project-image" 
+	         class="project project-tile"
+					 data-aos="flip-left">
+	      <img class="project-image"
 	           src="https://i.postimg.cc/7LTxKX1J/Tribute-Page.jpg"
 	           alt="project"
 	      />
@@ -74,12 +73,13 @@
 	        <span class="code">&#47;&gt;</span>
 	       </p>
 	      </a>
-	      
+
 	      <a href="https://codepen.io/diethermarcelo/full/mdyoypr"
 	         target="_blank"
 	         class="project project-tile"
+					 data-aos="flip-left"
 	      >
-	        <img 
+	        <img
 	             class="project-image"
 	             src="https://i.postimg.cc/W3LsCrSW/Survey-Form-Page.jpg"
 	             alt="project"
@@ -88,13 +88,14 @@
 	          <span class="code"> &lt; </span>
 	          Survey Form
 	          <span class="code"> &#47;&gt; </span>
-	        </p> 
+	        </p>
 	      </a>
 	      <a href="https://codepen.io/diethermarcelo/full/eYmXZqz"
 	         target="_blank"
 	         class="project project-tile"
+					 data-aos="flip-left"
 	      >
-	        <img 
+	        <img
 	             class="project-image"
 	             src="https://i.postimg.cc/SxPSLH9p/Product-Landing-Page.jpg"
 	             alt="project"
@@ -103,13 +104,14 @@
 	          <span class="code"> &lt; </span>
 	          Product Landing Page
 	          <span class="code"> &#47;&gt; </span>
-	        </p> 
+	        </p>
 	      </a>
 	      <a href="https://codepen.io/diethermarcelo/full/RwNdOGw"
 	         target="_blank"
 	         class="project project-tile"
+					 data-aos="flip-left"
 	      >
-	        <img 
+	        <img
 	             class="project-image"
 	             src="https://i.postimg.cc/jdQnXqqY/Technical-Documentation-Page.jpg"
 	             alt="project"
@@ -118,69 +120,74 @@
 	          <span class="code"> &lt; </span>
 	          Technical Documentation Page
 	          <span class="code"> &#47;&gt; </span>
-	        </p> 
+	        </p>
 	      </a>
 	    </div>
-	    <a href="" 
+	    <a href=""
 	       class="btn btn-show-all"
 	       target="_blank"
-	       > <span class="code"> &lt; </span> Show all 
+	       > <span class="code"> &lt; </span> Show all
 	          <span class="code"> &#47;&gt; </span></a>
-	  </section>  
-	  
+	  </section>
+
 	  <!-- Profile -->
 	  <section id="profile">
 	    <!-- Header -->
-	    <div class="profile-section-header" data-aos="fade-right" 
+	    <div class="profile-section-header" data-aos="fade-right"
 	    	data-aos-anchor="#example-anchor"
      		data-aos-offset="3000"
     		data-aos-duration="1000">
 	      <h2 id="profile-section-header-h2"> Contact Me </h2>
 	    </div>
-	    
+
 	    <!-- Accounts -->
-	    <div class="contact-links" id="contact-links" data-aos="fade-right" 
+	    <div class="contact-links" id="contact-links" data-aos="fade-right"
 	    	data-aos-anchor="#example-anchor"
      		data-aos-offset="3000"
     		data-aos-duration="1000">
-	    <ul> 
-	      <a 
+	    <ul>
+	      <a
 	         href="https://www.facebook.com/TherMarcelo"
 	         target="_blank"
-	         id="" 
+	         id=""
 	         class="btn contact-details"
 	      ><li><img src="https://image.flaticon.com/icons/svg/1051/1051309.svg" id="img"> Facebook </li></a>
-	      
-	      <a 
+
+	      <a
 	         href="https://www.instagram.com/diethermarceloo/"
 	         target="_blank"
-	         id="" 
+	         id=""
 	         class="btn contact-details"
 	      ><li> <img src="https://image.flaticon.com/icons/svg/1051/1051313.svg"> Instagram </li></a>
 	      <a href="https://www.linkedin.com/in/diether-marcelo/"
 	         target="_blank"
-	         id="" 
+	         id=""
 	         class="btn contact-details"
 	      ><li> <img src="https://image.flaticon.com/icons/svg/1051/1051333.svg"> Linkedin </li></a>
-	      
+
 	      <a
 	         id="profile-link" href="https://github.com/Diethermarcelo"         target="_blank"
 	         href="#"
-	         class="btn contact-details"><li> <img src="https://image.flaticon.com/icons/svg/1051/1051326.svg"> GitHub</li> </a> 
+	         class="btn contact-details"><li> <img src="https://image.flaticon.com/icons/svg/1051/1051326.svg"> GitHub</li> </a>
 	    </li></a>
-	    
-	      <a 
+
+	      <a
 	         href="#"
 	         target="_blank"
-	         id="" 
+	         id=""
 	         class="btn contact-details">
-	      <li> <img src="https://image.flaticon.com/icons/svg/15/15874.svg"> Call Me</li> </a>    
+	      <li> <img src="https://image.flaticon.com/icons/svg/15/15874.svg"> Call Me</li> </a>
 	    </ul>
 	   </div>
 	</section>
 		<footer>
 		  <p>
-		    <a href="https://www.freecodecamp.org/" target="_blank">Thanks to FreeCodeCamp </a>
+				<!--  data-aos="fade-right"
+		    	data-aos-anchor="#example-anchor"
+	     		data-aos-offset="3000"
+	    		data-aos-duration="1000"
+				-->
+		    <a href="https://www.freecodecamp.org/" target="_blank"> Thanks to FreeCodeCamp </a>
 		  </p>
 		</footer>
 	</div>
