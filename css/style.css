@@ -68,6 +68,7 @@ img{
   position:fixed;
   top:0;
   z-index: 1;
+  background:black;
 }
 .nav{
   display:flex;
@@ -75,12 +76,13 @@ img{
   position:fixed;
   top:0;
   left:0;
-  width:100%;
+  width:100vw;
   background:var(--main-blue);
 }
 .nav-list{
   display:flex;
   margin-right:10px;
+  padding-right: 15px;
 }
 .nav-list a{
   display:block;
@@ -99,7 +101,7 @@ img{
   flex-direction:column;
   justify-content:center;
   align-items:center;
-  width:100%;
+  width:100vw;
   height: 100vh;
   background-color: #000;
   background-image: linear-gradient(62deg, #FFEFBA 0%, #FFFFFF 100%);
@@ -125,7 +127,6 @@ img{
   left:-1200px;
   animation: movetoright 2.5s forwards;
   position:relative;
-  width:120%;
 }
 #welcome-section p{
   font-size:2em;
@@ -141,12 +142,13 @@ img{
 #projects{
   text-align:center;
   padding-top:50px;
-  background: linear-gradient(62deg, #f46b45 0%, #eea849 100%);
+  background: linear-gradient(62deg, #56CCF2 0%, #2F80ED 100%);
+  width: 100vw;
 }
 #projects-section-header{
   max-width:400px;
   margin: 30px auto 30px auto;
-  /*border-bottom: 2px solid var(--main-blue);*/
+  border-bottom: 2px solid var(--main-white);
   font-size:2.3em;
   font-family: 'Bangers', cursive;
   letter-spacing:2px;
@@ -156,37 +158,42 @@ img{
     1px -1px 0  black,
     -1px 1px 0  black,
      1px 1px 0 black;
+   transition: all 1s linear;
+}
+#projects-section-header:hover{
+  cursor:default;
+  transform: scale(1.1);
 }
 .projects-grid{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   grid-gap: 15px;
-  width: 100%;
+  width: 100vh;
   max-width: 1280px;
   margin: 20px auto;
   margin-bottom:30px;
   justify-items: center;
 }
 .project {
-  background: var(--main-blue);
+  background: black;
   box-shadow: 1px 1px 50px rgba(0,0,0,.5);
   border-radius:5px;
-  color:var(--crimson);
+  color:white;
   max-width:400px;
 }
 .code{
-  color:var(--main-blue);
+  color:black ;
   transition: color .5s ease-out;
   font-family: 'Roboto', sans-serif;
   vertical-align:center;
   font-size:1.2em;
 }
 .project:hover .code{
-  color:white;
+  color:var(--crimson);
   font-weight:bold;
 }
 .project:hover{
-  color:white;
+  color:var(--crimson);
 }
 .project-image{
   border-radius:5px;
@@ -207,19 +214,19 @@ img{
   border-radius:4px;
 }
 .btn-show-all{
-  background:var(--main-blue);
+  background:black;
   padding-right:10px;
   margin-left: 10px;
   letter-spacing:2px;
-  color:var(--crimson);
+  color:white;
   transition: color .5s ease-out;
   margin-bottom:70px;
 }
 .btn-show-all:hover .code{
-  color:white;
+  color:var(--crimson);
 }
 .btn-show-all:hover{
-  color:white;
+  color:var(--crimson);
 }
 
 /* dito hanggang baba ng https://codepen.io/freeCodeCamp/pen/zNBOYG is wala pa ako*/
@@ -227,6 +234,7 @@ img{
 
 /* Contacts */
 #profile{
+  box-sizing: border-box
   font-size:1.5em;
   background-image: linear-gradient(62deg, #FFEFBA 0%, #FFFFFF 100%);
   color:black;
@@ -234,9 +242,8 @@ img{
   flex-direction:column;
   justify-content:center;
   align-items:center;
-  width:100%;
+  width:100vw;
   height:100vh;
-  padding: 0 10px;
 }
 .profile-section-header h2{
   font-family: 'Bangers', cursive;
@@ -261,10 +268,10 @@ img{
 .contact-details{
   font-size:1.4em;
   text-shadow: 2px 2px 2px white;
-  transition: transform 0.3s ease-out;
+  transition: transform 0.2s ease-out;
 }
 .contact-details:hover {
-  transform: translateY(8px);
+  transform: translateY(12px);
 }
 #profile li{
   color:black;
@@ -281,28 +288,30 @@ footer {
   font-weight: 300;
   display: flex;
   justify-content: space-evenly;
-  padding: 2rem;
-  width:100%;
+  width:100vw;
+  height:30px;
+  padding-top:20px;
   border-top: 4px solid var(--main-blue);
-  background: linear-gradient(62deg, #f46b45 0%, #eea849 100%);
+  background: black;
 }
 
 footer a{
   color:white;
   font-size:1.4em;
-  transition: font-size 5s;
   text-shadow:
    -1px -1px 0 black,
     1px -1px 0  black,
     -1px 1px 0  black,
      1px 1px 0 black;
-  opacity:0.5;
   transition:all 0.3s ease;
   letter-spacing: 2px;
+  font-size:15px;
+  display:block;
 }
 footer a:hover{
     opacity:1;
-    font-size: 30px
+    font-size: 30px;
+    transform:translateY(-20px);
 }
 
 /* Media Queries */
@@ -314,12 +323,19 @@ footer a:hover{
     width:100%;
     position:absolute;
   }
+  .nav-list{
+    display:flex;
+    margin-right:10px;
+    padding-right: 0px;
+  }
 }
 @media (max-width: 600px) {
   #navbar{
+    background:black;
+
     top:0;
     z-index: 1;
-    width:100%;
+    width:100vw;
     position:absolute;
   }
   .nav-list a{
@@ -368,7 +384,6 @@ footer a:hover{
     margin-right: 15px;
     flex-wrap:wrap;
     /*left:-1200px;*/
-
     position:relative;
   }
   #profile li{
@@ -400,12 +415,16 @@ footer a:hover{
   }
   .projects-grid{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 15px;
     width: 100%;
     margin: 20px auto;
     max-width:300px;
     margin-bottom:30px;
     justify-items: center;
+  }
+  #profile li img{
+    width:10px;
+    height:10px;
   }
 }
