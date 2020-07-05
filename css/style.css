@@ -31,9 +31,10 @@
 }
 
 /* box-sizing, font-sizing */
-*::before, *::after{
+/**::before, *::after{
   scroll-behavior:smooth;
 }
+*/
 html{
   box-sizing:border-box;
   scroll-behavior: smooth;
@@ -276,6 +277,7 @@ img{
 
 /* Footer */
 footer {
+  border-style:border-box;
   font-weight: 300;
   display: flex;
   justify-content: space-evenly;
@@ -305,6 +307,14 @@ footer a:hover{
 
 /* Media Queries */
 
+@media (max-width: 800px){
+  #navbar{
+    top:0;
+    z-index: 1;
+    width:100%;
+    position:absolute;
+  }
+}
 @media (max-width: 600px) {
   #navbar{
     top:0;
@@ -340,12 +350,15 @@ footer a:hover{
   }
   .project {
     font-size: 10px;
+    color:white;
   }
   .code{
     font-size:10px;
+    text-shadow: none;
   }
   .btn-show-all{
     font-size:15px;
+    color:white;
   }
   .profile-section-header h2{
     font-size:25px;
