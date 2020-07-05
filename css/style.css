@@ -302,7 +302,7 @@ footer a:hover{
     opacity:1;
     font-size: 30px
 }
-@media(max-width:500px){
+@media(max-width:800px){
   #welcome-section h1{
     font-size: 30px;
   }
@@ -332,6 +332,9 @@ footer a:hover{
     /*left:-1200px;*/
 
     position:relative;
+  }
+  #profile li{
+    font-size: 15px;
   }
   #profile li img{
     width:20px;
