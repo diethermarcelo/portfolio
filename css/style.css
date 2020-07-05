@@ -32,7 +32,6 @@
 
 /* box-sizing, font-sizing */
 *::before, *::after{
-  box-sizing:inherit;
   scroll-behavior:smooth;
 }
 html{
@@ -159,19 +158,20 @@ img{
 }
 .projects-grid{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   grid-gap: 15px;
   width: 100%;
   max-width: 1280px;
   margin: 20px auto;
   margin-bottom:30px;
+  justify-items: center;
 }
-
 .project {
   background: var(--main-blue);
-  box-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+  box-shadow: 1px 1px 50px rgba(0,0,0,.5);
   border-radius:5px;
   color:var(--crimson);
+  max-width:400px;
 }
 .code{
   color:var(--main-blue);
@@ -302,28 +302,46 @@ footer a:hover{
     opacity:1;
     font-size: 30px
 }
-@media(max-width:800px){
+
+/* Media Queries */
+
+@media (max-width: 600px) {
+  #navbar{
+    top:0;
+    z-index: 1;
+    width:100%;
+    position:absolute;
+  }
+  .nav-list a{
+    font-size: 10px;
+  }
   #welcome-section h1{
-    font-size: 30px;
+    font-size: 25px;
   }
   #welcome-section p{
     font-size: 20px;
   }
   #projects #projects-section-header{
-    font-size: 30px;
+    font-size: 25px;
+    transform:translateY(-20px)
   }
   .projects-grid{
-    width: 80%;
     font-size: 10px;
+    max-width:400px;
+    margin-left:auto;
+    margin-right:auto;
   }
   .project {
-    font-size: 15px;
+    font-size: 10px;
   }
   .code{
+    font-size:10px;
+  }
+  .btn-show-all{
     font-size:15px;
   }
   .profile-section-header h2{
-    font-size:35px;
+    font-size:25px;
     margin-right: 10px;
   }
   .contact-links{
@@ -334,7 +352,7 @@ footer a:hover{
     position:relative;
   }
   #profile li{
-    font-size: 15px;
+    font-size: 10px;
   }
   #profile li img{
     width:20px;
@@ -344,10 +362,24 @@ footer a:hover{
     position: absolute;
     left: 10%;
     right: 10%;
-    font-size: 15px;
+    font-size: 10px;
   }
   footer a:hover{
     transform:translateY(-15px);
     font-size: 20px;
   }
+}
+
+
+@media (max-width: 360px) {
+.projects-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-gap: 15px;
+  width: 100%;
+  margin: 20px auto;
+  max-width:300px;
+  margin-bottom:30px;
+  justify-items: center;
+}
 }
