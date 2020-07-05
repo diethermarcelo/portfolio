@@ -1,3 +1,15 @@
+/* Comments:
+  html: font-size
+  media queries for font-size
+  media nav and nav-list
+  media queries project secton and project grid
+
+  add:
+    nav media queries
+    welcome font-size media queries
+*/
+
+
 @import url('https://fonts.googleapis.com/css?family=Bangers|Open+Sans|Roboto&display=swap');
 
 
@@ -290,18 +302,6 @@ footer a:hover{
     opacity:1;
     font-size: 30px
 }
-
-/* Comments:
-  html: font-size
-  media queries for font-size
-  media nav and nav-list
-  media queries project secton and project grid
-
-  add:
-    nav media queries
-    welcome font-size media queries
-*/
-
 @media(max-width:500px){
   #welcome-section h1{
     font-size: 30px;
