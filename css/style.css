@@ -178,7 +178,7 @@ img{
 .project {
   background:#232526;
   box-shadow: 1px 1px 50px rgba(0,0,0,.5);
-  border-radius:5px;
+  border-radius:10px 10px 10px 10px;
   color:white;
   max-width:400px;
 }
@@ -197,8 +197,9 @@ img{
   color:var(--crimson);
 }
 .project-image{
-  border-radius:5px;
   height:400px;
+  border-radius:10px 10px 0px 0px;
+
 }
 .project-title{
   margin-top:5px;
@@ -212,7 +213,7 @@ img{
   display: inline-block;
   font-size:1.4em;
   padding:4px 8px;
-  border-radius:4px;
+  border-radius:10px;
 }
 .btn-show-all{
   background:#232526;
@@ -263,7 +264,6 @@ img{
   margin-top:15px;
   flex-wrap:wrap;
   /*left:-1200px;*/
-
   position:relative;
 }
 .contact-details{
@@ -318,37 +318,8 @@ footer a:hover{
 /* Media Queries */
 
 
-@media (max-width: 360px) {
-  #welcome-section h1{
-    font-size: 20px;
-  }
-  #welcome-section p{
-    font-size: 15px;
-  }
-  .projects-grid{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 15px;
-    width: 100%;
-    margin: 20px auto;
-    max-width:300px;
-    margin-bottom:30px;
-    justify-items: center;
-  }
-  #profile li img{
-    width:10px;
-    height:10px;
-  }
-}
 
-
-@media (max-width: 600px) {
-  #navbar{
-    top:0;
-    z-index: 1;
-    width:100vw;
-    position:absolute;
-  }
+@media(max-width: 700px){
   .nav-list a{
     font-size: 10px;
   }
@@ -363,18 +334,15 @@ footer a:hover{
     transform:translateY(-20px)
   }
   .projects-grid{
-    font-size: 10px;
-    margin-left:auto;
-    margin-right:auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-      grid-gap: 15px;
-      width: 100%;
-      margin: 20px auto;
-      max-width:400px;
-      margin-bottom:30px;
-      justify-items: center;
+    max-width: 500px;
+    margin: 20px auto;
+    margin-bottom:30px;
+    justify-items: center;
   }
+  .project {
+    max-width:400px;
+  }
+
   .project {
     font-size: 10px;
     color:white;
@@ -416,23 +384,12 @@ footer a:hover{
   }
 }
 
-@media (max-width: 900px){
-  #navbar{
-    top:0;
-    z-index: 1;
-    width:100%;
-    position:absolute;
-  }
-  .nav-list{
-    display:flex;
-    margin-right:10px;
-    padding-right: 0px;
-  }
+@media (max-width: 600px) {
   .projects-grid{
     font-size: 10px;
     margin-left:auto;
     margin-right:auto;
-    display: grid;
+      display: grid;
       grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
       grid-gap: 15px;
       width: 100%;
@@ -440,5 +397,36 @@ footer a:hover{
       max-width:400px;
       margin-bottom:30px;
       justify-items: center;
+  }
+}
+
+@media (max-width: 360px) {
+  #welcome-section h1{
+    font-size: 15px;
+  }
+  #welcome-section p{
+    font-size: 10px;
+    margin-top: 5px;
+  }
+  .projects-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 15px;
+    width: 100%;
+    margin: 20px auto;
+    max-width:200px;
+    margin-bottom:30px;
+    justify-items: center;
+  }
+  #projects-section-header{
+    font-size: 5px;
+  }
+  .project-image{
+    height:250px;
+    width:200px;
+  }
+  #profile li img{
+    width:10px;
+    height:10px;
   }
 }
