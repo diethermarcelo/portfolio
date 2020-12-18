@@ -78,13 +78,15 @@ img{
 .nav-list a{
   display:block;
   padding: 1em;
+  transition: .2s linear all;
 }
 .nav-list a li{
   font-size:1.2em;
 }
 .nav-list a:hover{
-  color:var(--crimson);
+  color: #2F80ED ;
 }
+  /* background: linear-gradient(62deg, #56CCF2 0%, #2F80ED 100%); 
 
 /* Welcome */
 #welcome-section{
@@ -122,7 +124,7 @@ img{
 #welcome-section p{
   font-size:2em;
   font-style:italic;
-  color:var(--main-blue);
+  color:#2F80ED;
   position:relative;
   top:-10px;
   left:-1200px;
@@ -137,8 +139,8 @@ img{
   width: 100vw;
 }
 #projects-section-header{
-  max-width:400px;
-  margin: 30px auto 30px auto;
+  max-width:500px;
+  margin: 0px auto 30px auto;
   /*border-bottom: 2px solid var(--main-white);*/
   font-size:2.3em;
   font-family: 'Bangers', cursive;
@@ -150,6 +152,7 @@ img{
     -1px 1px 0  black,
      1px 1px 0 black;
    transition: all .2s linear;
+  margin-bottom: 50px;
 }
 #projects-section-header:hover{
   cursor:default;
@@ -157,13 +160,20 @@ img{
 }
 .projects-grid{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-  grid-gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px 55px;
   width: 100vh;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 20px auto;
   margin-bottom:30px;
   justify-items: center;
+}
+@media(max-width: 1000px){
+  .projects-grid{
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 10px !important;   
+    max-width: 650px;
+  }
 }
 .project {
   background:#232526;
@@ -171,6 +181,7 @@ img{
   border-radius:10px 10px 10px 10px;
   color:white;
   max-width:400px;
+  width: 300px
 }
 .code{
   color:#232526;
@@ -187,15 +198,16 @@ img{
   color:var(--crimson);
 }
 .project-image{
-  height:400px;
+  height:300px;
   border-radius:10px 10px 0px 0px;
-
+  width: 100% !important;
+  max-width: 300px;
 }
 .project-title{
   margin-top:5px;
   font-family: 'Bangers', cursive;
   letter-spacing:3px;
-  font-size:1.3em;
+  font-size:1.1em;
   transition: color .5s ease-out;
   padding-bottom:5px;
 }
@@ -308,8 +320,7 @@ footer a:hover{
 /* Media Queries */
 
 
-
-@media(max-width: 850px){
+@media(max-width: 700px){
   .nav-list a{
     font-size: 10px;
   }
@@ -321,7 +332,7 @@ footer a:hover{
   }
   #projects #projects-section-header{
     font-size: 25px;
-    transform:translateY(-20px)
+    transform:translateY(-20px);  
   }
   .projects-grid{
     max-width: 500px;
