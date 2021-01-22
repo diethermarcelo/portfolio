@@ -16,6 +16,10 @@ html{
 }
 body *{
     box-sizing: border-box !important;
+    *::selection {
+        background: $tertiary-color;
+        color: $light;
+    }
 }
 img{
     width: 100%;
@@ -481,8 +485,10 @@ nav{
             height: 250px !important;
             width: 200px !important;
             margin: 0px auto 0px !important;
+            padding: 5px 5px 10px 5px !important;
+            box-shadow: 0 4px 30px 5px rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.1) !important;
             img{
-                height: 220px !important;
+                height: 230px !important;
             }
         }
         .paragraph p:last-child span{
@@ -1453,3 +1459,167 @@ nav{
 
 /* CONTACT */
 
+
+#contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .content{
+        //background: $tertiary-color;
+        // color: rgba(0,0,0,0);
+        // transform: skew(60deg, -30deg) translateY(-50px);
+        top: 0;
+        left: 0;
+        transform-origin: center;
+        // transform: skew(60deg, -30deg) translateY(-30px);
+        transform: translateY(0px) rotate(-25deg) skew(25deg);
+        // transform: skewX(30deg);
+        opacity: 0;
+        &[data-scroll='in']{
+            transition: .5s;
+            transition-delay: .5s;
+            opacity: 1;
+        }
+    }
+    &.bg-dark{   
+        .header{
+            h2{
+                background: $dark;
+                color: $light !important;
+                border-bottom: 0;
+            }
+            span{        
+                background:$dark; 
+            }
+        } 
+    }
+
+    /* */
+    h2 {
+        // text-shadow: -1px -1px 0 $dark, 1px -1px 0 $dark, -1px 1px 0 $dark, 1px 1px 0 $dark;
+        font-size: 65px;
+        font-weight: bold;
+        position: relative;
+        top: 0px;
+        text-align: center;
+        // text-shadow: 0 0 3px rgba(0, 0, 128, 0.25);
+        // z-index: 50;
+        &::selection {
+            background: $tertiary-color;
+        }
+    }
+    
+    /* SOCIAL MEDIA */
+
+    .contact-content{
+        ul{
+            display: flex;
+            position: relative;
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+            li{
+                position: relative;
+                margin: 0 15px;
+                list-style: none;
+                height: 60px;
+                width: 60px;
+                background: #CCC;
+                span{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: $tertiary-color;
+                    transition: 0.5s;
+                    display: flex !important;
+                    align-items: center;
+                    justify-content: center;
+                    color: $light;
+                    font-size: 30px ;
+                }
+                &:hover span{                    
+                    &:nth-child(5){
+                        transform: translate(40px, -40px);
+                        opacity: 1;
+                    }
+                    &:nth-child(4){
+                        transform: translate(30px, -30px);
+                        opacity: .8;
+                    }
+                    &:nth-child(3){
+                        transform: translate(20px, -20px);
+                        opacity: .6;
+                    }
+                    &:nth-child(2){
+                        transform: translate(10px, -10px);
+                        opacity: .4;
+                    }
+                    &:nth-child(1){
+                        transform: translate(0px, -0px);
+                        opacity: .2;
+                    }
+                }
+            }
+        }
+    }
+    @media(max-width: 767px){
+        h2{
+            font-size: 45px;
+        }
+        li{
+            height: 40px !important;
+            width: 40px !important;
+            max-height: 40px;
+            margin: 0 10px !important;
+            span{
+                font-size: 15px !important;
+            }
+        }
+    }
+    /*
+    h2:after {
+        content:"CONTACT ME";
+        position: absolute;
+        top: 15px;
+        left: 25px;
+        color: rgba(255,255,255,1);
+        transform: skew(-63deg) scale(1,.5);
+        text-shadow:
+        -1px -1px 1px #aaa,
+        -2px -2px 1px #999,
+        -3px -3px 1px #888,
+        -4px -4px 1px #777,
+        -5px -5px 1px #666,
+        -6px -6px 1px #555,
+        -7px -7px 5px rgba(0, 0, 128, 0.75);
+        z-index: 100;
+    }    
+    p {
+        width: 460px;
+        height: 220px;
+        position: absolute;
+        top: 180px;
+        left: 430px;
+        font: 14px/24px 'ArchitectsDaughterRegular';
+        color: rgba(255,255,255,.35);
+        text-align: center;
+        transform: skew(63deg,-26.6deg);
+        position: absolute;
+        z-index: 50;
+    }
+    
+    a:link, a:visited {
+        color: rgba(255, 211, 132, 0.5);
+        text-decoration: none;
+        transition: all .5s;
+    }
+    
+    a:hover {
+        color: rgba(255, 255, 255, 0.7);
+        text-shadow: 0 0 3px #63fdfe, 0 0 8px #fff;
+    }
+        
+    */
+}
