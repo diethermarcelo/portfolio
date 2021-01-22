@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap');
+
+body{
+  padding: 0;
+  margin:0;
+}
+#starwars {
+  height: 100vh;
+  background: rgb(20,20,20);
+  overflow: hidden;
+  font-family: 'Roboto';
+  /* push down the the wrapper by half the page */
+  position: relative;
+}
+
+#starwars::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 60%;
+  /* background to fade out the text as it goes up */
+  background: linear-gradient(180deg, rgba(20,20,20,1) 40%, rgba(20,20,20,0) 100%);
+}
+.wrapper {
+  display: flex;
+  height: 100%;
+  width: 60%;
+  margin: 0 auto;
+  /* perspective gives us a 3d space within the element to work with*/
+  /* perspective also has the effect of pushing the content "down" */
+  perspective: 300px;
+}
+.scroll-text {
+  position: relative;
+  margin-top:700px;
+  color: #ffc909;
+  font-size: 2vw;
+  line-height: 1.5em;
+  font-weight: bold;
+  text-align: justify;
+  position: relative;
+  animation: scroll 10s linear infinite;
+}
+h1,h2 {
+  text-align: center;
+}
+
+@keyframes scroll {
+	from { top: 0; transform: translateZ(0) rotateX(23deg); }
+	to { top: -7500px; transform: translateZ(-2500px) rotateX(21deg); }
+}

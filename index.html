@@ -1,366 +1,788 @@
-<!--
-	di gumagana yung animation ng Contact
-  html: font-size
-  media queries for font-size
-  media nav and nav-list
-  media queries project secton and project grid
-
-  add:
-    nav media queries
-    welcome font-size media queries
-*/
-
--->
-
 <!DOCTYPE html>
 <html>
-<head>
-	<title> Personal Portfolio </title>
-  <meta charset="UTF-8">
-  <meta name="description" content="Free Web tutorials">
-  <meta name="keywords" content="HTML, CSS, JavaScript">
-  <meta name="author" content="John Doe">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="css/style.css" />
-	<script>
-		window.onload = function(){
-			document.getElementById("nav-profile").onclick = function() {
-				document.getElementById("profile-section-header-h2").style.animation = "movetoright 2.5s forwards";
-				document.getElementById("contact-links").style.animation = "movetoright 2.5s forwards";
-			};
-			/*
-			document.getElementById("profile").onscroll = function() {
-				alert("a")
-			}*/
+	<head>
+		<title> Diether Marcelo </title>
 
-		/*	document.getElementById("nav-profile").onclick = function(){
-				//e.preventDefault();
-				alert("a");
-			})*/
-		}
+		<!-- metadata -->
+		<meta charset="UTF-8">
+		<meta name="description" content="Diether Marcelo Portfolio">
+		<meta name="keywords" content="Diether Marcelo, HTML, CSS, JavaScript, Portfolio, Diether Marcelo Portfolio">
+		<meta name="author" content="Diether Marcelo">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	</script>
-	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-</head>
-<body>
+		<!-- Stylesheet and Bootstrap -->
+		<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-<link
-  rel="stylesheet"  href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-  integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
-  crossorigin="anonymous"
-/>
-	<div id="container">
-	  <!-- Nav -->
-	  <nav id="navbar" class="nav">
-	  	<div class="container">
-		    <ul class="nav-list">
-		      <a href="#welcome-section">
-		        <li> About </li>
-		      </a>
-		      <a href="#projects">
-		        <li> Projects </li>
-		      </a>
-		      <a href="#profile" id="nav-profile" id="last-nav-list">
-		        <li> Contact </li>
-		      </a>
-		    </ul>
-	  	</div>
-	  </nav>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
 
-	  <!-- Welcome -->
-	  <section id="welcome-section">
-	    <h1> Hello! I am Diether Marcelo </h1>
-	    <p > a programmer </p>
-	  </section>
+		<!-- Javascripts -->
+		<script src="js/app.js"> </script>
+		<script src="https://code.jquery.com/jquery-2.1.3.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"> </script>
 
-	  <!-- Projects -->
-	  <section id="projects">
-	    <h2 id="projects-section-header" data-aos="fade-right"> These are my projects </h2>
+		
+	</head>
+	<body>		
 
-	    <div class="projects-grid">
-
-
-
-		  <!-- Project -->
-	      <a href="#"
-	         target="_blank"
-	         class="project project-tile"
-					 data-aos="flip-left">
-	      <img class="project-image"
-	           src="img/projects/DoggoBlogs.png"
-	           alt="project"
-	      />
-	       <p class="project-title">
-	        <span class="code">&lt; </span>        Blog
-	        <span class="code">&#47;&gt;</span>
-	       </p>
-	      </a>
-
-		  <!-- Project -->
-	      <a href="#"
-	         target="_blank"
-	         class="project project-tile"
-					 data-aos="flip-left">
-	      <img class="project-image"
-	           src="img/projects/Burgerer-1.png"
-	           alt="project"
-	      />
-	       <p class="project-title">
-	        <span class="code">&lt; </span>        Online Ordering
-	        <span class="code">&#47;&gt;</span>
-	       </p>
-	      </a>
-
-
-		  <!-- Project -->
-	      <a href="#"
-	         target="_blank"
-	         class="project project-tile"
-					 data-aos="flip-left">
-	      <img class="project-image"
-	           src="img/projects/Burfwings.png"
-	           alt="project"
-	      />
-	       <p class="project-title">
-	        <span class="code">&lt; </span>        Brochure #2
-	        <span class="code">&#47;&gt;</span>
-	       </p>
-	      </a>
-
-		  <!-- Project -->
-	      <a href="#"
-	         target="_blank"
-	         class="project project-tile"
-					 data-aos="flip-left">
-	      <img class="project-image"
-	           src="img/projects/WebRacoon-2.png"
-	           alt="project"
-	      />
-	       <p class="project-title">
-	        <span class="code">&lt; </span>        Brochure #1 
-	        <span class="code">&#47;&gt;</span>
-	       </p>
-	      </a>
-
-		  <!-- Project  https://codepen.io/diethermarcelo/full/RwNdOGw -->
-	      <a href="#"
-	         target="_blank"
-	         class="project project-tile"
-					 data-aos="flip-left"
-	      >
-	        <img
-	             class="project-image"
-	             src="img/projects/Technical Documentation Page (2).png"
-
-	             alt="project"
-	        />
-	        <p class="project-title">
-	          <span class="code"> &lt; </span>
-	          Technical Documentation 
-	          <span class="code"> &#47;&gt; </span>
-	        </p>
-	      </a>
-
-		  <!-- Project https://codepen.io/diethermarcelo/full/bGNZGxp-->
-	      <a href="#"
-	         target="_blank"
-	         class="project project-tile"
-					 data-aos="flip-left">
-	      <img class="project-image"
-	           src="img/projects/TributePage.png"
-	           alt="project"
-	      />
-	       <p class="project-title">
-	        <span class="code">&lt; </span>        Tribute Page
-	        <span class="code">&#47;&gt;</span>
-	       </p>
-	      </a>
-
-
-		  <!-- Project -->
-	      <a href="#"
-	         target="_blank"
-	         class="project project-tile"
-					 data-aos="flip-left">
-	      <img class="project-image"
-	           src="img/projects/Chat (2).png"
-	           alt="project"
-	      />
-	       <p class="project-title">
-	        <span class="code">&lt; </span> Online Chat 
-	        <span class="code">&#47;&gt;</span>
-	       </p>
-	      </a>
-
-		  <!-- Project 
-	      <a href="#"
-	         target="_blank"
-	         class="project project-tile"
-					 data-aos="flip-left">
-	      <img class="project-image"
-	           src="img/projects/ChickenMaker.png"
-	           alt="project"
-	      />
-	       <p class="project-title">
-	        <span class="code">&lt; </span>        Online Ordering #1
-	        <span class="code">&#47;&gt;</span>
-	       </p>
-	      </a>
-	      -->
-
-
-		  <!-- Project 
-	      <a href="#"
-	         target="_blank"
-	         class="project project-tile"
-					 data-aos="flip-left">
-	      <img class="project-image"
-	           src="img/projects/Blog.png"
-	           alt="project"
-	      />
-	       <p class="project-title">
-	        <span class="code">&lt; </span>        Blog #1
-	        <span class="code">&#47;&gt;</span>
-	       </p>
-	      </a>
-	  	  -->
-
-	      <!-- 
-			  Project 
-	      <a href="#"
-	         target="_blank"
-	         class="project project-tile"
-					 data-aos="flip-left">
-	      <img class="project-image"
-	           src="img/projects/Todolist.png"
-	           alt="project"
-	      />
-	       <p class="project-title">
-	        <span class="code">&lt; </span>        Todo List
-	        <span class="code">&#47;&gt;</span>
-	       </p>
-	      </a>
-
-	      	Project
-
-
-	      <a href="https://codepen.io/diethermarcelo/full/mdyoypr"
-	         target="_blank"
-	         class="project project-tile"
-					 data-aos="flip-left"
-	      >
-	        <img
-	             class="project-image"
-	             src="img/projects/SurveyFormPage.jpg"
-	             alt="project"
-	        />
-	        <p class="project-title">
-	          <span class="code"> &lt; </span>
-	          Survey Form
-	          <span class="code"> &#47;&gt; </span>
-	        </p>
-	      </a>
-
-	      -->
-		  <!-- Project 
-	      <a href="https://codepen.io/diethermarcelo/full/eYmXZqz"
-	         target="_blank"
-	         class="project project-tile"
-					 data-aos="flip-left"
-	      >
-	        <img
-	             class="project-image"
-	             src="img/projects/ProductLandingPage.jpg"
-	             alt="project"
-	        />
-	        <p class="project-title">
-	          <span class="code"> &lt; </span>
-	          Product Landing Page #3
-	          <span class="code"> &#47;&gt; </span>
-	        </p>
-	      </a>
-	      -->
-
-	    </div>
-	    <a href=""
-	       class="btn btn-show-all"
-	       target="_blank"
-	       > <span class="code"> &lt; </span> Show all
-	          <span class="code"> &#47;&gt; </span>
-	      </a>
-
-	  </section>
-
-	  <!-- Profile -->
-	  <section id="profile">
-	    <!-- Header -->
-	    <div class="profile-section-header" data-aos="fade-right"
-	    	data-aos-anchor="#example-anchor"
-     		data-aos-offset="3000"
-    		data-aos-duration="1000">
-	      <h2 id="profile-section-header-h2"> Contact Me </h2>
-	    </div>
-
-	    <!-- Accounts -->
-	    <div class="contact-links" id="contact-links" data-aos="fade-right"
-	    	data-aos-anchor="#example-anchor"
-     		data-aos-offset="3000"
-    		data-aos-duration="1000">
-	    <ul>
-	      <a
-	         href="https://www.facebook.com/TherMarcelo"
-	         target="_blank"
-	         id=""
-	         class="btn contact-details"
-	      ><li><img src="img/icons/facebook.png" id="img"> Facebook </li></a>
-
-	      <a
-	         href="https://www.instagram.com/diethermarcelo/"
-	         target="_blank"
-	         id=""
-	         class="btn contact-details"
-	      ><li> <img src="img/icons/instagram.png"> Instagram </li></a>
-	      <a href="https://www.linkedin.com/in/diether-marcelo/"
-	         target="_blank"
-	         id=""
-	         class="btn contact-details"
-	      ><li> <img src="img/icons/linkedin.png"> Linkedin </li></a>
-
-	      <a
-	         id="profile-link" href="https://github.com/Diethermarcelo"         target="_blank"
-	         href="#"
-	         class="btn contact-details"><li> 
-		<img src="img/icons/github.png"> GitHub</li> </a>
-	    </li></a>
-
-	      <a
-	         href="tel:09219244021"
-	         target="_blank"
-	         id=""
-	         class="btn contact-details"
-	         title="+63 921 924-4021">
-		      <li> <img src="img/icons/phone.png"> Call Me </li> 
-		  </a>
-	    </ul>
-	   </div>
-	</section>
-
-		<footer>
+		<nav class="navbar navbar-expand-lg text-light navbar-dark bg-dark" id="navbar">
+			<div class="container"> 
+				<a class="navbar-brand" href="#">Diether Marcelo</a>
+				<button class="navbar-toggler mr-2" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
 			
-		  	<!--
-				 data-aos="fade-right"
-		    	data-aos-anchor="#example-anchor"
-	     		data-aos-offset="3000"
-	    		data-aos-duration="1000"
-		    <a href="https://www.freecodecamp.org/" target="_blank"> Thanks to FreeCodeCamp </a>
-		  </p>
-			-->
-		</footer>
-	</div>
-	<script>
-	  AOS.init();
-	</script>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item active active-light" id="nav-home">
+							<a class="nav-link" href="#welcome">Home <span class="sr-only">(current)</span></a>
+						</li>
+						<li class="nav-item" id="nav-about">
+							<a class="nav-link" href="#about">About</a>
+						</li>
+						
+						<li class="nav-item dropdown" id="nav-accomplishment">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							  Accomplishments
+							</a>
+							<div class="dropdown-menu bg-dark" id="dropdown" aria-labelledby="navbarDropdownMenuLink">
+								<a class="dropdown-item" href="#projects">Projects</a>
+							  	<a class="dropdown-item" id="nav-certificate" href="#certificates">Certificates</a>
+							  	<a class="dropdown-item" href="#skills">Skills</a>
+							</div>
+						</li>
+						<li class="nav-item" id="nav-contact">
+							<a class="nav-link" href="#contact">Contact</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		
+		<!-- ⮞ -->
+		
+		<!-- WELCOME -->
+		<div id="welcome" class="full-hw bg-light text-dark">
+			<div id="welcome-header"> 
+				<div class="text">
+					<h1> Hi, I'm <span> Diether Marcelo </span> </h1>
+					<p> a software developer </p>
+				</div>
+				<div class="buttons">
+					<div class="button">
+						<a href="#projects" id="view-works" class="btn btn-light"><span>View Works</span></a>
+					</div>
+					<div class="button">
+						<a href="files/Resume (Diether Marcelo - 1, 2021).pdf" class="btn btn-light" download><span>Download Resume</span></a>
+					</div>
+				</div>
+			</div>
+		</div>
 
-</body>
+		<!-- ABOUT -->
+		<div id="about" class="full-hw bg-dark">
+			<div class="container">
+				<div class="header"> 
+					<h2 class=""> <span> ABOUT ME </span> </h2>
+				</div>
+				<div class="row">						
+					<div class="col-md-6 p-2 thumbnail">
+						<div class="img">
+							<div class="thumb">
+								<img src="img/2.jpg" alt="">
+								<div class="cover"></div>								
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 paragraph">
+						<p> 
+							Hi! I'm a <span> programmer enthusiast</span> and I've been studying programming for almost 4 years. I'm really interested 
+							when it comes to honing my skills, educating myself and having self-development.
+						</p>
+						<p>
+							I'm currently pursuing a <span>Bachelor of Science in Information Technology </span> degree. I've learned a lot of 
+							programming languages including Python, Java and some basics of C#. I also know several frameworks like 
+							<span>Angular, VueJS, CodeIgniter, Laravel and Django.</span> 
+							
+						<div>
+							<p> I'm also good when it comes to database or using SQL. I have a great experience in web 
+							development due to the projects I've done such as online ordering, blogging sites and including 
+							online chat so I'm proficient when it comes web technologies such as <span>HTML, CSS, JS and 
+							including PHP.</span> Furthermore, I've also done a desktop application project called payroll system with 
+							biometric and barcode technology. Besides programming, I'm also good when it comes to editing with the use 
+							of <span>Adobe Photoshop and also know some of the basics of After Effects.</span> I've done a lot 
+							of editing projects like movie posters and basic editing stuff like removing a/an 
+							background/object from an image for a client. I'm currently working on a e-commerce web 
+							project and also learning about creating mobile apps.
+							</p>
+						</div>
+	
+						</p>
+						<p>
+							I've always exceed my employers expectations on me and won't waste every given opportunity to me. I will 
+							always be glad to help people especially my clients with my knowledge and skills.
+						</p>
+						<p>
+							<span>
+								Have a nice day and God bless! 
+							</span>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+
+		<!-- PROJECTS -->
+		<div id="projects" class="full-hw bg-light text-dark">
+			<div class="container">
+				<div class="header"> 
+					<h2><span> MY PROJECTS </span></h2>				
+				</div>
+				<div class="projects-list">
+					<div class="project">
+						<div class="container text-center my-3">
+							<div class="row mx-auto my-auto">
+								<div id="recipeCarousel" class="carousel slide w-100" data-ride="carousel">									
+									<div class="controls">
+										<a class="carousel-control-prev w-auto" id="carousel-control" href="#recipeCarousel" role="button" data-slide="prev">
+											<span class="carousel-control-prev-icon bg-dark border border-dark rounded-circle" aria-hidden="true"></span>
+											<span class="sr-only">Previous</span>
+										</a>
+										<a class="carousel-control-next w-auto" id="carousel-control" href="#recipeCarousel" role="button" data-slide="next">
+											<span class="carousel-control-next-icon bg-dark border border-dark rounded-circle" aria-hidden="true"></span>
+											<span class="sr-only">Next</span>
+										</a>
+									</div>
+									<div class="carousel-inner scroll w-100" role="listbox">
+										<!-- FIRST PROJECT -->
+										<div class="carousel-item active">
+											<div class="col-md-4">
+												<div class="card card-body">
+													<img class="img-fluid card-img-top"  src="img/projects/DoggoBlogs.png">
+													<div class="project-header">
+														<h5 class="card-title"> DoggoBlogs </h5>
+														<h6 class="card-subtitle mb-2 text-muted"> Blog Site </h6>
+													</div>
+													<div id="more">														
+														<div class="project-description" id="testing">
+															<div class="project-description-description">
+																<p class="project-description-heading"> Description </p>
+																<p class="project-description-text"> 
+																	A blogging website about dogs
+																</p>	
+															</div>
+															<div class="project-technologies-used">
+																<p class="project-description-heading"> Technologies Used </p>
+																<div class="project-description-text "> 
+																	<ul class="technologies">
+																		<li> HTML </li>
+																		<li> CSS </li>
+																		<li> SCSS </li>
+																		<li> Bootstrap </li>
+																		<li> Javascript </li>
+																		<li> PHP </li>
+																		<li> Laravel </li>
+																	</ul> 
+																</div>	
+															</div>
+															<div class="project-functionalities">
+																<p class="project-description-heading"> Functionalities </p>
+																<div class="project-description-text functionalities"> 
+																	<ul>
+																		<li> Able users to create, read, update and delete posts (including post an image) </li>
+																		<li> Format post with the used of CKEditor </li>
+																		<li> View post/s based on category </li>
+																		<li> Responsive </li>
+																		<li> Authentication Functionality </li>
+																		<li> Routing Functionality </li>
+																		<li> Comment Functionality  </li>
+																	</ul>
+																</div>	
+															</div>
+														</div>														
+														<a href="#" class="explore btn btn-light"><span> Explore </span></a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- SECOND PROJECT -->
+										<div class="carousel-item">
+											<div class="col-md-4">
+												<div class="card card-body">
+													<img class="img-fluid" src="img/projects/Burfwings.png">
+													<div class="project-header">
+														<h5 class="card-title"> Burfwings </h5>
+														<h6 class="card-subtitle mb-2 text-muted"> Brochure Site </h6>
+													</div>
+													<div id="more">														
+														<div class="project-description">
+															<div class="project-description-description">
+																<p class="project-description-heading"> Description </p>
+																<p class="project-description-text">
+																	A website made for Burfwings 
+																</p>	
+															</div>
+															<div class="project-technologies-used">
+																<p class="project-description-heading"> Technologies Used </p>
+																<div class="project-description-text "> 
+																	<ul class="technologies">
+																		<li> HTML </li>
+																		<li> CSS </li>
+																		<li> Javascript </li>
+																		<li> Bootstrap </li>
+																	</ul> 
+																</div>	
+															</div>
+															<div class="project-functionalities">
+																<p class="project-description-heading"> Functionalities </p>
+																<div class="project-description-text functionalities"> 
+																	<ul>
+																		<li> Responsive  </li>
+																		<li> Shows Burfwings' products and services </li>
+																	</ul>
+																</div>	
+															</div>
+														</div>														
+														<a href="#" class="explore btn btn-light"><span> Explore </span></a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- THIRD PROJECT -->
+										<div class="carousel-item">
+											<div class="col-md-4">
+												<div class="card card-body">
+													<img class="img-fluid" src="img/projects/WebRacoon-2.png">
+													<div class="project-header">
+														<h5 class="card-title"> Web Racoon Website </h5>
+														<h6 class="card-subtitle mb-2 text-muted"> Brochure Site </h6>
+													</div>
+													<div id="more">														
+														<div class="project-description">
+															<div class="project-description-description">
+																<p class="project-description-heading"> Description </p>
+																<p class="project-description-text"> 
+																	Turns the design to web
+																</p>	
+															</div>															
+															<div class="project-technologies-used">
+																<p class="project-description-heading"> Technologies Used </p>
+																<div class="project-description-text "> 
+																	<ul class="technologies">
+																		<li> HTML </li>
+																		<li> CSS </li>
+																		<li> SCSS </li>
+																		<li> Javascript </li>
+																	</ul> 
+																</div>	
+															</div>
+															<div class="project-functionalities">
+																<p class="project-description-heading"> Functionalities </p>
+																<div class="project-description-text functionalities"> 
+																	<ul>
+																		<li> PSD to HTML  </li>
+																	</ul>
+																</div>	
+															</div>															
+														</div>														
+														<a href="#" class="explore btn btn-light"><span> Explore </span></a>
+													</div>												
+												</div>
+											</div>
+										</div>
+										<!-- FOURTH PROJECT -->
+										<div class="carousel-item">
+											<div class="col-md-4">
+												<div class="card card-body">
+													<img class="img-fluid" src="img/projects/Technical Documentation Page (2).png">
+													<div class="project-header">
+														<h5 class="card-title"> CSS Tutorial </h5>
+														<h6 class="card-subtitle mb-2 text-muted"> Technical Documentation Site </h6>
+													</div>
+													<div id="more">														
+														<div class="project-description">
+															<div class="project-description-description">
+																<p class="project-description-heading"> Description </p>
+																<p class="project-description-text"> A technical documentation for CSS</p>	
+															</div>															
+															<div class="project-technologies-used">
+																<p class="project-description-heading"> Technologies Used </p>
+																<div class="project-description-text "> 
+																	<ul class="technologies">
+																		<li> HTML </li>
+																		<li> CSS </li>
+																		<li> SCSS </li>
+																		<li> Javascript </li>
+																	</ul> 
+																</div>	
+															</div>
+															<div class="project-functionalities">
+																<p class="project-description-heading"> Functionalities </p>
+																<div class="project-description-text functionalities"> 
+																	<ul>
+																		<li> Responsive  </li>
+																		<li> Interactive  </li>
+																	</ul>
+																</div>	
+															</div>															
+														</div>														
+														<a href="#" class="explore btn btn-light"><span> Explore </span></a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- FIFTH PROJECT -->
+										<div class="carousel-item">
+											<div class="col-md-4">
+												<div class="card card-body">
+													<img class="img-fluid" src="img/projects/Burgerer-1.png">
+													<div class="project-header">
+														<h5 class="card-title"> Burgerer </h5>
+														<h6 class="card-subtitle mb-2 text-muted"> Online Ordering System </h6>
+													</div>
+													<div id="more">														
+														<div class="project-description">
+															<div class="project-description-description">
+																<p class="project-description-heading"> Description </p>
+																<p class="project-description-text"> A website that lets you order burgers </p>	
+															</div>															
+															<div class="project-technologies-used">
+																<p class="project-description-heading"> Technologies Used </p>
+																<div class="project-description-text "> 
+																	<ul class="technologies">
+																		<li> HTML </li>
+																		<li> CSS </li>
+																		<li> SCSS </li>
+																		<li> Javascript </li>
+																		<li> PHP </li>
+																	</ul> 
+																</div>	
+															</div>
+															<div class="project-functionalities">
+																<p class="project-description-heading"> Functionalities </p>
+																<div class="project-description-text functionalities"> 
+																	<ul>
+																		<li> Authentication Functionality </li>
+																		<li> Send Orders </li>
+																		<li> View orders including complete orders (admin) </li>
+																	</ul>
+																</div>	
+															</div>
+														</div>														
+														<a href="#" class="explore btn btn-light"><span> Explore </span></a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- 3D
+							<div class="box">
+							<span style="--i:1;">/span> > <img src="img/projects/DoggoBlogs.png" alt=""> </span>
+							<span style="--i:2;">/span> > <img src="img/projects/Technical Documentation Page (2).png" alt=""> </span>
+							<span style="--i:3;">/span> > <img src="img/projects/WebRacoon-2.png" alt=""> </span>
+							<span style="--i:4;">/span> > <img src="img/projects/Burgerer-1.png" alt=""> </span>
+							<span style="--i:5;">/span> > <img src="img/projects/Chat (2).png" alt=""> </span>
+							</div>
+						-->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- CERTIFICATES -->
+		<div id="certificates" class="full-hw bg-dark text-light">
+			<div class="container">
+				<div class="cliparts">
+					<div class="clipart left">
+						<img src="img/grass.png" alt="">
+					</div>
+					<div class="clipart">
+						<img src="img/grass.png" alt="">
+					</div>
+				</div>
+				<div class="header"> 
+					<h2 class=""> <span> CERTIFICATES </span>  </h2>
+				</div>			
+				<div class="certificates-list scroll"> <!-- card-columns -->					
+					<div class="card">				
+						<div class="card-front">
+							<div class="image">
+								<img src="img/certificates/HTML5 Basic Game Webinar.png" alt="">
+							</div>	
+						</div>								
+						<div class="card-back">
+						</div>	
+						<div class="cover"></div>
+					</div>					
+					<div class="card">
+						<div class="image">
+							<img src="img/certificates/Python 3 Tutorial Certificate.jpg" alt="">
+						</div>			
+						<div class="cover"></div>				
+					</div>
+					<div class="card">
+						<div class="image">
+							<img src="img/certificates/SCSS & SASS Certification.png" alt="">
+						</div>		
+						<div class="cover"></div>					
+					</div>
+					<div class="card">
+						<div class="image">
+							<img src="img/certificates/PHP Tutorial Certificate.jpg" alt="">
+						</div>			
+						<div class="cover"></div>				
+					</div>
+					<div class="card">				
+						<div class="image">
+							<img src="img/certificates/Responsive Web Design Certificate.jpg" alt="">
+						</div>			
+						<div class="cover"></div>	
+					</div>					
+					<div class="card">
+						<div class="image">
+							<img src="img/certificates/React + Redux Certificate.jpg" alt="">
+						</div>		
+						<div class="cover"></div>					
+					</div>
+					<!--
+					<div class="card">
+						<div class="image">
+							<img src="img/certificates/Responsive Web Design Certificate.jpg" alt="">
+						</div>							
+					</div>
+					<div class="card">
+						<div class="image">
+							<img src="img/certificates/Responsive Web Design Certificate.jpg" alt="">
+						</div>							
+					</div>
+					<div class="card">
+						<div class="image">
+							<img src="img/certificates/Responsive Web Design Certificate.jpg" alt="">
+						</div>							
+					</div>
+					<div class="card">
+						<div class="image">
+							<img src="img/certificates/Responsive Web Design Certificate.jpg" alt="">
+						</div>							
+					</div>
+					-->
+				</div>
+			</div>
+		</div>
+
+		  
+		<!-- SKILLS -->
+		<div id="skills" class="full-hw bg-light text-dark">
+			<div class="container">
+				<div class="header"> 
+					<h2 class=""> <span> SKILLS </span>  </h2>
+				</div>
+				<div class="skills-list">					
+					<div class="skill-card">
+						<div class="skill">
+							<div class="skill-front">
+								<div>
+									<figure class="chart" data-percent="85">				
+										<div id="test"> 
+											<span> 85% </span>
+										</div>
+										<svg width="100%" height="100px">
+											<!-- Chrome
+												<circle class="outer" cx="50%" cy="50%" r="42" />
+											-->
+											<circle class="outer" cx="140px" cy="45px" r="41" />
+										</svg>
+									</figure>
+									<h4> WEB DEVELOPMENT </h4>
+								</div>
+							</div>
+							<div class="skill-back">
+								<div class="skill-back-content">
+									<div class="skill-back-content-skills">
+										<span class="skill-back-content-skill"> HTML </span>	
+										<div class="skill-back-content-subskills">
+										</div>
+									</div>
+									<div class="skill-back-content-skills">
+										<span class="skill-back-content-skill"> CSS </span>	
+										<div class="skill-back-content-subskills">
+											<span> SCSS </span>
+											<span> Bootstrap </span>
+										</div>
+									</div>
+									<div class="skill-back-content-skills">
+										<span class="skill-back-content-skill"> JavaScript </span>	
+										<div class="skill-back-content-subskills">
+											<span> ES6 </span>
+											<span> AJAX </span>
+											<span> jQuery </span>
+											<span> TypeScript </span>
+											<span> ReactJS </span>
+											<span> NodeJS </span>
+											<span> VueJS </span>
+											<span> AngularJS </span>
+											<span> Angular </span>
+										</div>
+									</div>
+									<div class="skill-back-content-skills">
+										<span class="skill-back-content-skill"> PHP </span>	
+										<div class="skill-back-content-subskills">
+											<span> CodeIgniter </span>
+											<span> WordPress </span>
+											<span> Laravel </span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>														
+					<div class="skill-card">
+						<div class="skill">
+							<div class="skill-front">
+								<div>
+									<figure class="chart" data-percent="80">				
+										<div id="test"> 
+											<span> 80% </span>
+										</div>
+										<svg width="100%" height="100px">
+											<!-- Chrome
+												<circle class="outer" cx="50%" cy="50%" r="42" />
+											-->
+											<circle class="outer" cx="140px" cy="45px" r="41" />
+										</svg>
+									</figure>
+									<h4> PROGRAMMING </h4>
+								</div>
+							</div>
+							<div class="skill-back">
+								<div class="skill-back-content">
+									<div class="skill-back-content-skills">
+										<span class="skill-back-content-skill"> Java </span>	
+										<div class="skill-back-content-subskills">
+											<span> Spring </span>
+											<span> Java EE </span>
+										</div>
+									</div>
+									<div class="skill-back-content-skills">
+										<span class="skill-back-content-skill"> Python </span>	
+										<div class="skill-back-content-subskills-right">
+											<span> Django </span>
+										</div>
+									</div>
+									<div class="skill-back-content-skills">
+										<span class="skill-back-content-skill"> .NET </span>	
+										<div class="skill-back-content-subskills">
+											<span> VB </span>
+											<span> ASP </span>
+											<span> C# </span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>			
+					<div class="skill-card">
+						<div class="skill">
+							<div class="skill-front">
+								<div>
+									<figure class="chart" data-percent="85">				
+										<div id="test"> 
+											<span> 85% </span>
+										</div>
+										<svg width="100%" height="100px">
+											<!-- Chrome
+												<circle class="outer" cx="50%" cy="50%" r="42" />
+											-->
+											<circle class="outer" cx="140px" cy="45px" r="41" />
+										</svg>
+									</figure>
+									<h4> DATABASE </h4>
+								</div>
+							</div>
+							<div class="skill-back">
+								<div class="skill-back-content">
+									<div class="skill-back-content-skills">
+										<span class="skill-back-content-skill"> SQL </span>	
+										<div class="skill-back-content-subskills-right">
+											<span> MySQL </span>											
+											<span> Oracle </span>
+										</div>
+									</div>
+									<div class="skill-back-content-skills">
+										<span class="skill-back-content-skill"> NoSQL </span>	
+										<div class="skill-back-content-subskills-right">
+											<span> MongoDB </span>
+										</div>
+									</div>
+								</div>	
+							</div>
+						</div>
+					</div>	
+					
+					<div class="skill-card">
+						<div class="skill">
+							<div class="skill-front">
+								<div>
+									<figure class="chart" data-percent="75">				
+										<div id="test"> 
+											<span> 75% </span>
+										</div>
+										<svg width="100%" height="100px">
+											<!-- Chrome
+												<circle class="outer" cx="50%" cy="50%" r="42" />
+											-->
+											<circle class="outer" cx="140px" cy="45px" r="41" />
+										</svg>
+									</figure>
+									<h4> HARDWARE/SOFTWARE </h4>
+								</div>
+							</div>
+							<div class="skill-back">
+								<div class="skill-back-content">
+									<div class="skill-back-content-skills">
+										<span class="skill-back-content-skill"> PC Related </span>	
+										<div class="skill-back-content-subskills">
+											<span> Assemble or Disassemble PC </span>
+											<span> Format PC </span>
+											<span> Installing OS and Drivers </span>
+											<span> Troubleshooting </span>
+										</div>
+									</div>
+									<div class="skill-back-content-skills">
+										<span class="skill-back-content-skill"> Adobe Products </span>	
+										<div class="skill-back-content-subskills">
+											<span> Photoshop </span>
+											<span> After Effects </span>
+										</div>
+									</div>
+									<div class="skill-back-content-skills">
+										<span class="skill-back-content-skill"> MS Office </span>	
+										<div class="skill-back-content-subskills">
+											<span> Word </span>
+											<span> Excel </span>
+											<span> Powerpoint </span>
+										</div>
+									</div>
+									<div class="skill-back-content-skills">
+										<span class="skill-back-content-skill"> Version Control </span>	
+										<div class="skill-back-content-subskills">
+											<span> GIT </span>
+										</div>
+									</div>
+									<div class="skill-back-content-skills">
+										<span class="skill-back-content-skill"> More </span>	
+										<div class="skill-back-content-subskills">
+											<div class="subskills-container">
+												<span class="subskills-title"> Operating System </span>
+												<div >
+													<span> Windows 	</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>									
+					
+					<div class="skill-card">
+						<div class="skill">
+							<div class="skill-front">
+								<div>
+									<figure class="chart" data-percent="70">				
+										<div id="test"> 
+											<span> 70% </span>
+										</div>
+										<svg width="100%" height="100px">
+											<!-- Chrome
+												<circle class="outer" cx="50%" cy="50%" r="42" />
+											-->
+											<circle class="outer" cx="140px" cy="45px" r="41" />
+										</svg>
+									</figure>
+									<h4> GAME DEVELOPMENT </h4>
+								</div>
+							</div>
+							<div class="skill-back">
+								<div class="skill-back-content">
+									<div class="skill-back-content-skills">
+										<span class="skill-back-content-skill"> Unity </span>	
+										<div class="skill-back-content-subskills">
+										</div>
+									</div>
+									<div class="skill-back-content-skills">
+										<span class="skill-back-content-skill"> p5.js </span>	
+										<div class="skill-back-content-subskills">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>			
+					
+					<div class="skill-card">
+						<div class="skill">
+							<div class="skill-front">								
+								<div>
+									<figure class="chart" data-percent="80">				
+										<div id="test"> 
+											<span> 80% </span>
+										</div>
+										<svg width="100%" height="100px">
+											<!-- Chrome
+												<circle class="outer" cx="50%" cy="50%" r="42" />
+											-->
+											<circle class="outer" cx="140px" cy="45px" r="41" />
+										</svg>
+									</figure>
+									<h4> SOFT SKILLS </h4>
+								</div>
+							</div>
+							<div class="skill-back">
+								<div class="skill-back-content">
+									<div class="skill-back-content-skills">
+										<span class="skill-back-content-skill"> Communication </span>	
+									</div>
+									<div class="skill-back-content-skills">
+										<span class="skill-back-content-skill"> Problem-Solving </span>	
+									</div>
+									<div class="skill-back-content-skills">
+										<span class="skill-back-content-skill"> Teamwork </span>
+									</div>
+									<div class="skill-back-content-skills">
+										<span class="skill-back-content-skill"> Work Ethic </span>
+									</div>
+								</div>	
+							</div>
+						</div>
+					</div>			
+				</div>	
+			</div>
+		</div>
+
+		<!-- CONTACT -->
+		<div id="contact" class="full-hw bg-dark text-light" >
+			<div class="container">
+				<div class="header"> 
+					<!-- <h2 class=""> <span> THESE ARE MY PROJECTS </span> </h2> -->
+					<h2> CONTACT ME </h2>
+				</div>
+				<div class="content">
+
+				</div>
+			</div>
+		</div>
+
+		<!-- SCRIPTS -->
+		<script src="js/scroll.js"></script>
+		<script>
+			ScrollOut({
+				targets: 'span, .thumb, .cover, .clipart, .buttons, .chart, .text, .scroll'
+			})
+		</script>
+	</body>
 </html>
