@@ -107,7 +107,13 @@ window.onload = function(){
         dropdown.className = "dropdown-menu bg-light";         
     } 
 
+    // Brand On Click Event
+    var brand = document.querySelector("#nav-brand");
+    brand.addEventListener("click", function(){
+        navbar.className = "navbar navbar-expand-lg text-light navbar-dark bg-dark"; 
+    })
 
+    // Nav Items On Click Events
     nav_items.forEach(function(item){
         var item_tag = document.querySelector("#nav-" + item);
         item_tags.push({name: item, body: item_tag});

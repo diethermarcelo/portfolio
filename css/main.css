@@ -82,7 +82,7 @@ nav .nav-item {
   margin-top: 5px;
 }
 
-@media (min-width: 991px) {
+@media screen and (min-width: 991px) {
   nav .nav-item {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -95,7 +95,7 @@ nav .nav-item a {
   padding: 10px 10px 15px 10px !important;
 }
 
-@media (max-width: 991px) {
+@media screen and (max-width: 991px) {
   nav.bg-dark .dropdown .dropdown-menu.bg-light {
     background: #343a40 !important;
   }
@@ -117,7 +117,7 @@ nav .dropdown-menu {
   transition: .2s linear all;
 }
 
-@media (min-width: 991px) {
+@media screen and (min-width: 991px) {
   nav .dropdown-menu.bg-light a {
     color: rgba(107, 98, 98, 0.5) !important;
   }
@@ -136,7 +136,7 @@ nav .dropdown-menu .dropdown-item:hover {
   background: none;
 }
 
-@media (max-width: 991px) {
+@media screen and (max-width: 991px) {
   nav .dropdown-menu .dropdown-item {
     color: rgba(255, 255, 255, 0.5) !important;
   }
@@ -1713,7 +1713,7 @@ nav .navbar-toggler {
   top: 0px;
   -webkit-transition: .2s;
   transition: .2s;
-  max-width: 100px;
+  max-width: 110px;
   z-index: 0;
   color: #4f565b;
   display: -webkit-box;
@@ -1727,6 +1727,7 @@ nav .navbar-toggler {
   left: 0;
   gap: 12px;
   font-size: 12px;
+  /* MORE AND SUBSKILLS*/
 }
 
 #skills .skill-back .skill-back-content .skill-back-content-skills .skill-back-content-subskills span {
@@ -1741,11 +1742,50 @@ nav .navbar-toggler {
   color: #5ea66f;
 }
 
-#skills .skill-back .skill-back-content .skill-back-content-skills .skill-back-content-subskills .subskills-container {
+#skills .skill-back .skill-back-content .skill-back-content-skills .skill-back-content-subskills .subskills-container, #skills .skill-back .skill-back-content .skill-back-content-skills .skill-back-content-subskills .skillmore-container {
   position: relative;
   -webkit-transition: .2s;
   transition: .2s;
   max-width: 100px;
+}
+
+#skills .skill-back .skill-back-content .skill-back-content-skills .skill-back-content-subskills .skillmore-container {
+  margin-top: -4px;
+}
+
+#skills .skill-back .skill-back-content .skill-back-content-skills .skill-back-content-subskills .skillmore-container:hover .skillmore-title {
+  opacity: 0;
+}
+
+#skills .skill-back .skill-back-content .skill-back-content-skills .skill-back-content-subskills .skillmore-container:hover .skillmore-content {
+  opacity: 1;
+  -webkit-transform: translateY(-14%);
+          transform: translateY(-14%);
+}
+
+#skills .skill-back .skill-back-content .skill-back-content-skills .skill-back-content-subskills .skillmore-container .skillmore-title {
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+#skills .skill-back .skill-back-content .skill-back-content-skills .skill-back-content-subskills .skillmore-container .skillmore-content {
+  -webkit-transition: .2s;
+  transition: .2s;
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 12px;
 }
 
 #skills .skill-back .skill-back-content .skill-back-content-skills .skill-back-content-subskills .subskills-container div {
@@ -1990,7 +2030,7 @@ nav .navbar-toggler {
   opacity: .2;
 }
 
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   #contact h2 {
     font-size: 45px;
   }

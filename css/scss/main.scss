@@ -72,7 +72,7 @@ nav{
     .nav-item{       
         border: none;
         margin-top: 5px;
-        @media(min-width: 991px){
+        @media screen and (min-width: 991px){
             border-top-left-radius: 10px;
             border-top-right-radius: 10px;
             margin-right: 5px !important;
@@ -82,7 +82,8 @@ nav{
             padding: 10px 10px 15px 10px !important;
         }
     }
-    @media(max-width: 991px){         
+    
+    @media screen and (max-width: 991px){         
         &.bg-dark .dropdown{
             .dropdown-menu.bg-light{
                 background: $dark !important;
@@ -105,7 +106,7 @@ nav{
         margin-top: -8px;
         transition: .2s linear all;
         
-        @media(min-width: 991px){
+        @media screen and (min-width: 991px){
             &.bg-light a{
                 color: rgba(107, 98, 98, 0.5) !important;
                 &:hover{
@@ -123,7 +124,8 @@ nav{
            background: none;
         }
         
-        @media(max-width: 991px){
+        
+        @media screen and (max-width: 991px){
             .dropdown-item{
                 color: rgba(255,255,255,.5) !important;
                 &:hover{
@@ -1357,7 +1359,7 @@ nav{
                     position: absolute;
                     top: 0px;
                     transition: .2s;
-                    max-width: 100px;
+                    max-width: 110px;
                     z-index: 0;
                     color:$dark-gray;
                     display: flex;
@@ -1375,10 +1377,38 @@ nav{
                             color: $tertiary-color;
                         }
                     }
-                    .subskills-container{
+
+                    /* MORE AND SUBSKILLS*/
+                    .subskills-container, .skillmore-container{
                         position: relative;
                         transition: .2s;
                         max-width: 100px;
+                    }
+                    .skillmore-container{                     
+                        margin-top: -4px;
+                        &:hover{
+                            .skillmore-title{
+                                opacity: 0;
+                            }    
+                            .skillmore-content{
+                                opacity: 1;
+                                transform: translateY(-14%);
+                            }
+                        }
+                        .skillmore-title{                            
+                            transition: .2s;
+                        }
+                        .skillmore-content{
+                            transition: .2s;
+                            opacity: 0;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 12px;
+                        }
+                    }
+                    .subskills-container{
                         div{
                             left: 0;
                             width: 100%;
@@ -1564,7 +1594,7 @@ nav{
             }
         }
     }
-    @media(max-width: 767px){
+    @media screen and (max-width: 767px){
         h2{
             font-size: 45px;
         }
